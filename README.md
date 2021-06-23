@@ -1,7 +1,9 @@
-## test README.md file
+# README.md
 
-This project is the survey program made with react and nodejs express frameworks.
+1. 페이스북과 타입폼을 mern스택으로 클론한 프로젝트입니다.
+2. aws서비스들을 유기적으로 활용, 웹사이트로 시스템을 구조화했습니다.
 
-▪ npm install
-▪ cd react_server > npm install
-▪ npm run dev
+개발 배경 및 필요성
+① 기업의 폼서비스 활용증가, 글로벌기업의 영구재택근무화 ex) 라인, 네이버, 트위터 등
+②초중고교의 폼서비스 활용증가, 초중고교를 타켓으로 한 폼 서비스 활용 기업의 성장 ex)학교종이
+-> 폼 서비스의 활용 가능성이 무궁무진함. 따라서, 폼 서비스를 최적화하고 특화하려는 시도는 큰 효과를 기대할 수 있을 것

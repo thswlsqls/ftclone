@@ -1,0 +1,40 @@
+@import '~antd/dist/antd.css';
+
+.nav_menu {
+  padding: 0 20px;
+  border-bottom: solid 1px #e8e8e8;
+  overflow: auto;
+  box-shadow: 0 0 30px #f3f1f1;
+  background-color: #ffffff;
+
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+
+  /* from typeform css */
+  min-width: 0px;
+  min-height: 0px;
+  flex-shrink: 1;
+
+  box-sizing: inherit;
+
+  display: block;
+}
+
+.nav_menu_home {
+  width: 150px;
+  float: left;
+}
+
+.nav_menu_home a {
+  display: inline-block;
+  font-size: 20px;
+  padding: 19px 20px;
+}
+
+.nav_menu_right {
+  float: right;
+  display: inline-block;
+  font-size: 20px;
+  padding: 19px 20px;
+}
