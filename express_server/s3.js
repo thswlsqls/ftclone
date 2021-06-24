@@ -11,8 +11,8 @@ const chalk = require('chalk')
 
 const bucketName = 'myawsbucket-mern-test'
 const region = 'ap-northeast-2'
-const accessKeyId = 'AKIAWA5G6SXKQIS772VH'
-const secretAccessKey = 'AKIAWA5G6SXKQIS772VH'
+const accessKeyId = ''
+const secretAccessKey = ''
 
 const s3 = new S3({
     'region' : region,
