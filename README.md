@@ -1,5 +1,7 @@
 # README.md
+
 mern web project made by oneself
+
 you can simply check the *_captures.pdf, *_execution.mp4 files
 
 1. 페이스북과 타입폼을 mern스택으로 클론한 프로젝트입니다.
