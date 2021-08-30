@@ -12,7 +12,7 @@ www.ftclone.com
 
 ◾ guest account 
 
-id: guest@naver.com /
+email: guest@naver.com /
 pw: guest1234567
 
 
