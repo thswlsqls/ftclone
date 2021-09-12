@@ -74,7 +74,7 @@ function ReplyComment(props) {
                     return(
                         <div>
                             { comment.responseTo &&
-                            <div style={{ float:'left',  marginLeft: '36px', marginRight:'0px' }}>
+                            <div style={{ float:'left',  marginLeft: '36px', marginRight:'0px', width:"93%"}}>
                                 {
                                 comment.responseTo._id===props.parentComment._id && 
                                 <SingleComment key = {`sc${comment._id}`} parentComment={props.parentComment} ThisPostCommentList={props.ThisPostCommentList} postId={props.postId} comment = {comment}/>
@@ -85,7 +85,7 @@ function ReplyComment(props) {
                     )
                 })
             }
-            <div style={{float:'left',  maxWidth:'85%', minWidth:'85%', marginLeft: '36px', marginRight:'0px' }}>
+            <div style={{float:'left', marginLeft: '36px', marginRight:'0px', maxWidth:'95%', minWidth:'85%', width:"90%"}}>
                 <div className="div_postUnit_ViewAndAddComments_addCommentForm">
                     <div className="div_postUnit_ViewAndAddComments_addCommentForm_Avatar">
                         <Avatar src={"https://scontent-nrt1-1.xx.fbcdn.net/v/t1.30497-1/cp0/c12.0.40.40a/p40x40/84688533_170842440872810_7559275468982059008_n.jpg?_nc_cat=1&ccb=3&_nc_sid=7206a8&_nc_ohc=ucBZ3Qt1MvkAX_Bzo9K&_nc_ht=scontent-nrt1-1.xx&tp=27&oh=0c1968e06cbf7cd964e7d3784f83085f&oe=6064714E"}></Avatar>
