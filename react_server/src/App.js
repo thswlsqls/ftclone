@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router, 
   Switch, 
   Route,
-  
 } from 'react-router-dom';
 import Auth from './hoc/auth';
 import LandingPage from './components/views/LandingPage/LandingPage';
@@ -16,14 +15,11 @@ import FormPage from './components/views/FormPage/FormPage';
 import WorkspacePage from './components/views/WorkspacePage/WorkspacePage';
 
 import Navbar from './components/views/Navbar/Navbar';
-import { useSelector } from 'react-redux';
 
 function App() {
 
   // const user = useSelector(state => state.user)
   // const miiniform = useSelector(state => state.miiniform)
-
-  const formid = "testid";
 
   return (
     <div className="div_app">

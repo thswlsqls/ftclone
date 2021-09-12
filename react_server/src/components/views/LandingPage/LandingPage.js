@@ -14,6 +14,7 @@ import Comment from './Sections/Comment'
 import Like from './Sections/Like'
 import LikeCount from './Sections/LikeCount'
 import {expressServerPort} from '../../../Config'
+import * as dateFns from "date-fns";
 
 import "./styles.css";
 
@@ -201,7 +202,7 @@ function LandingPage(props) {
                             </Avatar>
                             <div className="div_postUnit_navContent__">
                                 <div style={{marginTop:"3px"}} className="div_postUnit_navContent__userID">{post.writer.user_name}</div>
-                                <div style={{marginTop:"2px"}} className="div_postUnit_navContent__createDate">create_Date{post.create_Date}</div>
+                                <div style={{marginTop:"2px"}} className="div_postUnit_navContent__createDate">{dateFns.format(new Date(post.createdAt), "yyyy년 MM월 dd일")}</div>
                             </div>
                             <div className="div_postUnit_navContent_options">
                                 <EllipsisOutlined style={{cursor:'pointer'}}/>

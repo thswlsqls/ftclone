@@ -1,14 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const { User } = require("../models/User");
-const { Post } = require("../models/Post");
 const { Miniform } = require("../models/Miniform");
 const { Question } = require("../models/Question");
 const { Choice } = require("../models/Choice");
 const {Answer} = require("../models/Answer");
-
-const { auth } = require("../middleware/auth");
 
 //=================================
 //             miniform

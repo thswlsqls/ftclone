@@ -356,6 +356,7 @@
 .div_postUnit_navContent__ {
   display: flex;
   width: 100%;
+  height: 40px;
 
   margin-top: -4px;
   padding-left: 6px;
@@ -389,6 +390,7 @@
   flex-direction: column;
   flex-grow: initial;
   height: auto;
+  margin-top: 2px;
 }
 
 .div_postUnit_mainContent_textContent {
@@ -1385,6 +1387,7 @@
   flex-direction: row;
   outline: none;
   -webkit-font-smoothing: antialiased;
+  width:90%;
 }
 
 .div_postUnit_ViewAndAddComments_addCommentForm_Avatar {

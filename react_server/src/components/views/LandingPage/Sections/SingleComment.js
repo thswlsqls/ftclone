@@ -5,6 +5,7 @@ import Axios from 'axios'
 import { useSelector } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import ReplyComment from './ReplyComment'
+import * as dateFns from "date-fns";
 
 function SingleComment(props) {
 
@@ -159,7 +160,19 @@ const [isCommented, setisCommented] = useState(false)
                                         ∙ 
                                 </span>
                                 <div className="div_postUnit_ViewAndAddComments_Comment_content_ulDate">
-                                        the elapsed time have to be added..
+                                        {/* the elapsed time have to be added.. */}
+                                        {
+                                            dateFns.differenceInWeeks(new Date(), new Date(props.comment.createdAt)) ? 
+                                            dateFns.differenceInWeeks(new Date(), new Date(props.comment.createdAt)) + "주"
+                                            :  dateFns.differenceInDays(new Date(), new Date(props.comment.createdAt)) ?
+                                            dateFns.differenceInDays(new Date(), new Date(props.comment.createdAt)) + "일"
+                                            : dateFns.differenceInHours(new Date(), new Date(props.comment.createdAt)) ? 
+                                            dateFns.differenceInHours(new Date(), new Date(props.comment.createdAt)) + "시간"
+                                            : dateFns.differenceInMinutes(new Date(), new Date(props.comment.createdAt)) ?
+                                            dateFns.differenceInMinutes(new Date(), new Date(props.comment.createdAt)) + "분"
+                                            : dateFns.differenceInSeconds(new Date(), new Date(props.comment.createdAt)) + "초"
+                                        } 
+                                           
                                 </div>
                             </li>
                             <li id="li_postUnit_ViewAndAddComments_Comment_content_ulLikeCount">

@@ -2,9 +2,7 @@ const express = require("express");
 
 const chalk = require('chalk');
 const bodyParser = require("body-parser"); //요청을 분석하여 가져옴
-const { User } = require("./models/User");
 const cookieParser = require("cookie-parser")
-const {auth} = require("./middleware/auth");
 const cors = require('cors');
 
 const app = express();

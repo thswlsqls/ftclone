@@ -98,8 +98,6 @@ userSchema.statics.findByToken = function(token, cb) {
         })
     })
 
-
-
 }
 
 

@@ -2149,7 +2149,7 @@ function FormPage() {
             </div>                                                                                                                 
         </div>
         <div className={`BaseStylesRoot-sc-__gqan6a-0 cnpIbj ${isPublished ? "" : "hidden"}`}>
-            <div id="kitt-0" tabindex="-1" role="dialog" data-qa="share-popup-content" aria-hidden="false" className="PopoverRoot-sc-__ru1bae-0 qZjNA" style={{ position: "absolute", inset: "0px auto auto 0px", margin: "0px", transform: "translate3d(607px, 48px, 0px)"}} data-popper-placement="bottom">
+            <div id="kitt-0" tabindex="-1" role="dialog" data-qa="share-popup-content" aria-hidden="false" className="PopoverRoot-sc-__ru1bae-0 qZjNA" style={{ osition: "absolute", inset: "0px auto auto 0px", margin: "0px", transform: "translate3d(607px, 48px, 0px)"}} data-popper-placement="bottom">
                 <div  className="Card-sc-__i4fuko-0 sc-fzokOt cYhfSS">
                     <div className="sc-fznZeY gJlwEu">
                         <div className="sc-AxgMl cVmQYF">

@@ -10,10 +10,22 @@ const { auth } = require("../middleware/auth");
 
 
 router.post("/register", (req, res) => {
+
     const user = new User(req.body);
-    user.save((err, userinfo) => {
+
+    user.save((err, user) => {
         if(err) return res.send('register failed'+err)
-        return res.status(200).json({registerSuccess: true});
+        return res.status(200).json({registerSuccess: true, registeredUser: user});
+    })
+})
+
+router.post("/kakaoLogin", (req, res) => {
+
+    const user = new User(req.body);
+
+    user.save((err, user) => {
+        if(err) return res.send('kakao login failed'+err)
+        return res.status(200).json({registerSuccess: true, registeredUser: user});
     })
 })
 
