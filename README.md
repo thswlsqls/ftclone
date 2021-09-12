@@ -1,17 +1,19 @@
 # README.md
 
+mern web project made by oneself
+
+you can simply check the *.pdf, *_execution.mp4 files
+
 1. 페이스북과 타입폼을 mern스택으로 클론한 프로젝트입니다.
-2. aws서비스들을 유기적으로 활용, 웹사이트로 시스템을 구조화했습니다.
-
-◾개발 배경 및 필요성
-① 기업의 폼서비스 활용증가, 글로벌기업의 영구재택근무화 ex) 라인, 네이버, 트위터 등
-②초중고교의 폼서비스 활용증가, 초중고교를 타켓으로 한 폼 서비스 활용 기업의 성장 ex)학교종이
-
-◾결론
-① 폼 서비스의 활용 가능성이 무궁무진함.
-② 폼서비스를 최적화하고 UX를 특화하려는 시도는 큰 효과를 기대할 수 있을 것
+2. aws서비스를 활용해 소프트웨어의 아키텍처를 구성했습니다.
 
 ◻ 도메인 주소 ◻
 www.ftclone.com
+
+◾ guest account 
+
+email: ftclone@naver.com /
+password: ftclone12345
+
 
 #비대면문화 #영구재택근무 #포스트코로나 #폼서비스활용증가
