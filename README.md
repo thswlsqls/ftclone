@@ -12,8 +12,8 @@ www.ftclone.com
 
 ◾ guest account 
 
-email: guest@naver.com /
-pw: guest1234567
+email: ftclone@naver.com /
+password: ftclone12345
 
 
 #비대면문화 #영구재택근무 #포스트코로나 #폼서비스활용증가
