@@ -130,4 +130,12 @@ router.get('/getPosts', (req, res) =>{
         
 })
 
+router.delete('/deletePost', (req, res) =>{
+
+    Post.findByIdAndDelete(req.body.postId, {$set: req.body}, (err, doc) => {
+        if(err) return res.json({ success: false, err: err })
+        return res.status(200).json({ success: true, doc: doc })
+    });    
+})
+
 module.exports = router;

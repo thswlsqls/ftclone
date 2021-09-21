@@ -119,7 +119,7 @@ function WorkspacePage(props) {
 
         return(
             <li className="ListItem-sc-__lexhmg-1 iqLhzO">
-                <a color="description" href="#" rel="noopener noreferrer" tabIndex="0" target="_blank" className="Link-sc-__sc-2xj0ye-0 Izdvl">
+                <a color="description" href="#" rel="noopener noreferrer" tabIndex="0" target="_self" className="Link-sc-__sc-2xj0ye-0 Izdvl">
                     <div className="help-center-content__ItemWrapper-sc-1x892rx-1 ggxbaB">
                         <div orientation="horizontal" className="Distribute-sc-__sc-1s2i8aq-0 hEcBFA">
                             <div height="8px" width="8px" color="#0487AF" className={`Align-sc-__sc-4yw49j-0 IconRoot-sc-__sc-1eorqw0-0 ${item.className}`}>
@@ -149,7 +149,7 @@ function WorkspacePage(props) {
                 miniformId: thisMiniform._id
             }
     
-            Axios.post('/api/miniForm/deleteMiniform', variables)
+            Axios.delete('/api/miniForm/deleteMiniform', {data:variables})
                     .then(response => {
                         if(response.data.success){
                             alert('Miniform을 성공적으로 삭제했습니다.')

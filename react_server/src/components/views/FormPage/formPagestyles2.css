@@ -252,9 +252,9 @@
     fill: none;
   }
   a:-webkit-any-link {
-    color: -webkit-link;
+    /* color: -webkit-link; */
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
   }
   .cnpIbj *,
   .cnpIbj ::before,

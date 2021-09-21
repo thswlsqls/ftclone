@@ -515,7 +515,7 @@ function FormPage() {
                 choiceId: choice._id
             }
 
-            Axios.post('/api/miniform/deleteChoice', variabeles)
+            Axios.delete('/api/miniform/deleteChoice', {data: variabeles})
             .then(response => {
                 if(response.data.success){
                     alert("choice를 성공적으로 삭제했습니다.")
@@ -682,7 +682,7 @@ function FormPage() {
                 choiceId: choice._id
             }
 
-            Axios.post('/api/miniform/deleteChoice', variabeles)
+            Axios.delete('/api/miniform/deleteChoice', {data: variabeles})
             .then(response => {
                 if(response.data.success){
                     alert("choice를 성공적으로 삭제했습니다.")
@@ -781,7 +781,7 @@ function FormPage() {
                 questionId: question._id
             }
     
-            Axios.post('/api/miniForm/deleteQuestion', variables)
+            Axios.delete('/api/miniForm/deleteQuestion', {data: variables})
                     .then(response => {
                         if(response.data.success){
                             alert('question을 성공적으로 삭제했습니다.')
@@ -1111,7 +1111,7 @@ function FormPage() {
             questionId: choosedQuestion._id
         }
 
-        Axios.post('/api/miniForm/deleteQuestion', variables)
+        Axios.delete('/api/miniForm/deleteQuestion', {data: variables})
                 .then(response => {
                     if(response.data.success){
                         alert('question을 성공적으로 삭제했습니다.')

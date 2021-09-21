@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { Route, withRouter } from "react-router-dom";
-import { Avatar, Typography } from 'antd';
-import  Icon, { EllipsisOutlined, LikeFilled, LikeOutlined, LikeTwoTone, MessageOutlined } from '@ant-design/icons';
+import { Avatar, Typography, Menu, Dropdown, Button, Space } from 'antd';
+import  Icon, {DeleteOutlined, InboxOutlined, CalendarOutlined, GlobalOutlined, ReloadOutlined, LockFilled, EditOutlined, CodeOutlined, InfoCircleOutlined, BellOutlined, TagOutlined, MessageFilled, CloseSquareOutlined, EllipsisOutlined, LikeFilled, LikeOutlined, LikeTwoTone, MessageOutlined } from '@ant-design/icons';
+
+
 import Dropzone from 'react-dropzone';
 import {useSelector} from 'react-redux';
 import Logo from './Sections/Logo'
@@ -25,7 +27,8 @@ function LandingPage(props) {
     const [LikeList, setLikeList] = useState([])
     const [isLike, setisLike] = useState(0)
     const [LikeListLength, setLikeListLength] = useState(0)
-    
+    const [isPostSettingOpenedState, setisPostSettingOpenedState] = useState(0)
+
     var user = { userData :{
         isAuth: false
         },
@@ -95,7 +98,7 @@ function LandingPage(props) {
         let ThisPostLikeList = []
         ThisPostLikeList = LikeList.filter((like, index)=>{
             if(like.postId){
-                return like.postId._id === post._id
+                return like.postId._id === post._id && like.commentId == null
             }
         })
 
@@ -104,7 +107,7 @@ function LandingPage(props) {
         // }))
 
         let isthisUserthisPostLike = ThisPostLikeList.some(like => {
-                return like.userId._id = user.userData._id  
+                return like.userId._id  = user.userData._id && like.commentId == null  
         })
 
         console.log(ThisPostLikeList.some(like => {
@@ -185,6 +188,116 @@ function LandingPage(props) {
         
         }
 
+        const deletePost = (post) => {
+
+            console.log("게시물 삭제")
+            
+            const variables = {
+                postId: post._id
+            }
+    
+            Axios.delete('/api/FormDatas/deletePost',{data: variables})
+                    .then(response => {
+                        if(response.data.success){
+                            alert('게시물을 성공적으로 삭제했습니다.')
+                            console.log(response.data);
+                        }else{
+                            alert('게시물 삭제에 실패했습니다.')
+                            console.log(response.data.err);
+                        }
+                    })
+        }
+
+        const myPostMenus = (
+            <Menu style={{padding:"8px 0", borderRadius:"4px"}}>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <TagOutlined /> 링크 저장
+                </a>
+              </Menu.Item>
+              <hr style={{margin:"8px 16px", borderColor:"#dadde1"}}/>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                <EditOutlined /> 게시물 수정
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                <LockFilled /> 공개 대상 수정
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <BellOutlined /> 이 게시물에 대한 알림 해제
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <GlobalOutlined />  번역 해제
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <CalendarOutlined /> 날짜 수정
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <ReloadOutlined /> 공유 첨부 파일 새로 고침
+                </a>
+              </Menu.Item>
+              <hr style={{margin:"8px 16px", borderColor:"#dadde1"}}/>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <InboxOutlined /> 보관함으로 이동
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px"}}>
+                <a onClick={()=>deletePost(post)}>
+                    <DeleteOutlined /> 휴지통으로 이동
+                </a>
+              </Menu.Item>
+            </Menu>
+          );
+
+          const postMenus = (
+            <Menu style={{padding:"8px 0", borderRadius:"4px"}}>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a  target="_self" rel="noopener noreferrer" href="">
+                    <CloseSquareOutlined /> 광고 숨기기
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <MessageFilled /> 광고 신고하기
+                </a>
+              </Menu.Item>
+              <hr style={{margin:"8px 16px", borderColor:"#dadde1"}}/>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <TagOutlined /> 링크 저장
+                </a>
+              </Menu.Item>
+              <hr style={{margin:"8px 16px", borderColor:"#dadde1"}}/>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <BellOutlined /> 이 게시물에 대한 알림 설정
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px", borderRadius: "4px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <InfoCircleOutlined /> 이 광고가 표시되는 이유는?
+                </a>
+              </Menu.Item>
+              <Menu.Item style={{padding:"8px", margin:"0% 8px"}}>
+                <a target="_self" rel="noopener noreferrer" href="">
+                    <CodeOutlined /> 퍼가기
+                </a>
+              </Menu.Item>
+            </Menu>
+          );
+
+          
         return(
             
             <div className="div_postContainer" key={index}>  
@@ -205,7 +318,13 @@ function LandingPage(props) {
                                 <div style={{marginTop:"2px"}} className="div_postUnit_navContent__createDate">{dateFns.format(new Date(post.createdAt), "yyyy년 MM월 dd일")}</div>
                             </div>
                             <div className="div_postUnit_navContent_options">
-                                <EllipsisOutlined style={{cursor:'pointer'}}/>
+                                <Space wrap style={{width:"36px", height:"36px"}}>
+                                    <Dropdown overlay={ post.writer._id == user.userData._id ? myPostMenus : postMenus } placement="bottomRight">
+                                        <Button className="MenuBtn"  style={{color:"black", borderRadius:"50%", padding:"4px 8px"}}>
+                                            <EllipsisOutlined style={{cursor:'pointer'}}/>
+                                        </Button>
+                                    </Dropdown>
+                                </Space>
                             </div>
                         </div>
                     </div>

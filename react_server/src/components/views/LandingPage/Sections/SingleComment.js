@@ -132,8 +132,8 @@ const [isCommented, setisCommented] = useState(false)
                             <div className="div_postUnit_ViewAndAddComments_Comment_content_ext">
                                 <span>
                                     <div>
-                                        <EllipsisOutlined style={{fontWeight: '600', fontSize: '1.2375rem'}}/>
-                                    </div>
+                                        <EllipsisOutlined style={{fontWeight: '600', fontSize: '1.2375rem', cursor:'pointer'}}/>
+                                    </div> 
                                 </span>
                             </div>
                         </div>

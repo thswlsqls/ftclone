@@ -64,7 +64,7 @@ router.post('/updateForm', (req, res) =>{
     });    
 })
 
-router.post('/deleteMiniform', (req, res) =>{
+router.delete('/deleteMiniform', (req, res) =>{
 
     Miniform.findByIdAndDelete(req.body.miniformId, {$set: req.body}, (err, doc) => {
         if(err) return res.json({ success: false, err: err })
@@ -107,7 +107,7 @@ router.post('/updateQuestion', (req, res) =>{
     });    
 })
 
-router.post('/deleteQuestion', (req, res) =>{
+router.delete('/deleteQuestion', (req, res) =>{
 
     Question.findByIdAndDelete(req.body.questionId, {$set: req.body}, (err, doc) => {
         if(err) return res.json({ success: false, err: err })
@@ -151,7 +151,7 @@ router.post('/updateChoice', (req, res) =>{
     });    
 })
 
-router.post('/deleteChoice', (req, res) =>{
+router.delete('/deleteChoice', (req, res) =>{
 
     Choice.findByIdAndDelete(req.body.choiceId, {$set: req.body}, (err, doc) => {
         if(err) return res.json({ success: false, err: err })
