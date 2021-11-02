@@ -34,10 +34,10 @@ function RegisterPage(props) {
   password.current = watch('password');
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form style={{ width: '50%' }} onSubmit={handleSubmit(onSubmit)}>
       <label>Email</label>
       <input
-        name="user_email"
+        name='user_email'
         //defaultValue="please text your email"
         ref={register({ required: true, pattern: /^\S+@\S+$/i, maxLength: 20 })}
       />
@@ -53,7 +53,7 @@ function RegisterPage(props) {
 
       <label>Name</label>
       <input
-        name="user_name"
+        name='user_name'
         //defaultValue="please text your email"
         ref={register({
           required: true,
@@ -73,8 +73,8 @@ function RegisterPage(props) {
 
       <label>Password</label>
       <input
-        name="password"
-        type="password"
+        name='password'
+        type='password'
         ref={register({ required: true, minLength: 12 })}
       />
       {errors.password && errors.password.type === 'required' && (
@@ -86,8 +86,8 @@ function RegisterPage(props) {
 
       <label>Password Confirm</label>
       <input
-        name="password_confirm"
-        type="password"
+        name='password_confirm'
+        type='password'
         ref={register({
           required: true,
           minLength: 12,
@@ -108,18 +108,18 @@ function RegisterPage(props) {
         )}
       <div>
         <Checkbox>I agree to the Program’s Terms of Service</Checkbox>
-        <a style={{ float: 'right' }} href="#">
+        <a style={{ float: 'right' }} href='#'>
           ❔Terms of Service
         </a>
 
         <Checkbox>
           I accept the Program’s use of my data for the service
         </Checkbox>
-        <a style={{ float: 'right' }} href="#">
+        <a style={{ float: 'right' }} href='#'>
           ❔Privacy Policy
         </a>
       </div>
-      <input type="submit" value="Register" />
+      <input type='submit' value='Register' />
     </form>
   );
 }

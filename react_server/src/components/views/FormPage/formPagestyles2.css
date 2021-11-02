@@ -25,17 +25,20 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
   }
+
   .qZjNA {
     outline: none;
     position: absolute;
     z-index: 1300;
   }
+
   .qZjNA::before {
     content: '';
     position: absolute;
     inset: calc(1px);
     pointer-events: none;
   }
+
   .cYhfSS {
     background-color: rgb(255, 255, 255);
     color: rgb(38, 38, 39);
@@ -47,12 +50,14 @@
     margin-right: 96px;
     max-width: 286px;
   }
+
   .dteCCc {
     position: relative;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
   }
+
   .fYZyZu {
     cursor: pointer;
   }
@@ -65,6 +70,7 @@
     width: auto;
     height: auto;
   }
+
   .kKgMaN svg {
     display: block;
     fill: rgb(137, 137, 137);
@@ -5562,7 +5568,7 @@
   }
 
   .dVtckW {
-    position: fixed;
+    position: absolute;
     bottom: 16px;
     right: 16px;
     z-index: 10;
@@ -5689,7 +5695,7 @@
 
   .fcKMCA {
     background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
+    position: absolute;
     left: 0px;
     top: 0px;
     width: 100vw;

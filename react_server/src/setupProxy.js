@@ -1,11 +1,15 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-module.exports = function(app) {
+const TIMEOUT = 120 * 180 * 1000;
+
+module.exports = function (app) {
   app.use(
-    '/api',
+    '/api/**',
     createProxyMiddleware({
       target: 'http://localhost:5000',
       changeOrigin: true,
+      timeout: TIMEOUT,
+      onError: (err, req, res) => console.log(err),
     })
   );
 };

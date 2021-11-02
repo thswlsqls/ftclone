@@ -96,10 +96,10 @@ input[type='submit'] {
   -webkit-appearance: none;
 }
 
-.App {
+/* .App {
   max-width: 600px;
   margin: 0 auto;
-}
+} */
 
 button[type='button'] {
   /* display: block; */
