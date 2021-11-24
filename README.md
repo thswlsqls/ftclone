@@ -17,3 +17,6 @@ password: ftclone12345
 
 
 #비대면문화 #영구재택근무 #포스트코로나 #폼서비스활용증가
+
+
+[손은빈 2021-DEV-PORTFOLIO_211029.pdf](https://github.com/thswlsqls/ftclone/files/7594042/2021-DEV-PORTFOLIO_211029.pdf)
