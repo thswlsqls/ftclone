@@ -20,6 +20,7 @@ password: ftclone12345
 
 
 [손은빈 2021-DEV-PORTFOLIO_211029.pdf](https://github.com/thswlsqls/ftclone/files/7594042/2021-DEV-PORTFOLIO_211029.pdf)
+[손은빈 2021-DEV-PORTFOLIO_211029.pdf](https://github.com/thswlsqls/ftclone/files/7594112/2021-DEV-PORTFOLIO_211029.pdf)
 
 https://user-images.githubusercontent.com/58901024/143205041-1c280c81-de88-42b5-a0ff-c05e7e61ebaa.mp4
 
