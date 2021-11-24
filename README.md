@@ -73,7 +73,7 @@ you can simply check the *.pdf, *_execution.mp4 files
 
 ◾ guest account ◾  
 
-## email: ftclone@naver.com /    
+## email: ftclone@naver.com 
 ## password: ftclone12345  
 
 #비대면문화 #영구재택근무 #온라인수업 #폼서비스활용증가  
