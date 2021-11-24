@@ -17,10 +17,7 @@ password: ftclone12345
 
 
 #비대면문화 #영구재택근무 #온라인수업 #폼서비스활용증가
-
-
-[손은빈 2021-DEV-PORTFOLIO_211029.pdf](https://github.c[2021-DEV-PORTFOLIO_211029.pdf](https://github.com/thswlsqls/ftclone/files/7594128/2021-DEV-PORTFOLIO_211029.pdf)
-om/thswlsqls/ftclone/files/7594042/2021-DEV-PORTFOLIO_211029.pdf)
+[2021-DEV-PORTFOLIO_211029.pdf](https://github.com/thswlsqls/ftclone/files/7594135/2021-DEV-PORTFOLIO_211029.pdf)
 
 https://user-images.githubusercontent.com/58901024/143205041-1c280c81-de88-42b5-a0ff-c05e7e61ebaa.mp4
 
