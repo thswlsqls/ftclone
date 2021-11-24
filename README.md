@@ -11,8 +11,8 @@ __1. 프로젝트 개요__
 
 [ 활용 기술 ]  
 1) Front - Javascript(ES6), HTML, CSS, React(JSX, Babel, Hot reload, CSR), React Hooks, Redux, Redux-devtooks, Chrome-devtools  
-2) BacK - Javascript(ES6), Node.js, Express.js, MongoDB Atlas
-3) Cloud - AWS EC2, Route53, S3, Cloud front, ALB(Application Loadbalancer), ACM(Amazon Certification Manager)
+2) BacK - Javascript(ES6), Node.js, NPM(Node Package manager), Express.js, MongoDB Atlas, Nginx  
+3) Deploy - AWS EC2, Route53, S3, Cloud front, ALB(Application Loadbalancer), ACM(Amazon Certification Manager)
 
 -----------------------------------------------
 __2. 국내외 관련분야 현황__  
