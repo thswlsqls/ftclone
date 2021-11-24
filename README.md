@@ -62,21 +62,19 @@ _개발기간 : 202102 ~ 202106_
 __7. 구현 화면과 실행 영상__  
 
 [2021-DEV-PORTFOLIO_211029.pdf](https://github.com/thswlsqls/ftclone/files/7594135/2021-DEV-PORTFOLIO_211029.pdf)   
-https://user-images.githubusercontent.com/58901024/143205041-1c280c81-de88-42b5-a0ff-c05e7e61ebaa.mp4  
+https://user-images.githubusercontent.com/58901024/143205041-1c280c81-de88-42b5-a0ff-c05e7e61ebaa.mp4
 
-mern web project made by oneself  
+mern web project made by oneself, deployed by amazon web service  
+
 you can simply check the *.pdf, *_execution.mp4 files  
 
-1. 페이스북과 타입폼을 mern스택으로 클론한 PWA 프로젝트입니다.  
-2. aws서비스를 활용해 소프트웨어의 아키텍처를 구성했습니다.  
-
-◻ 도메인 주소 ◻  
+◻ website domain ◻    
 www.ftclone.com  
 
-◾ guest account 
+◾ guest account ◾  
 
-email: ftclone@naver.com /  
-password: ftclone12345
+email: ftclone@naver.com /    
+password: ftclone12345  
 
 #비대면문화 #영구재택근무 #온라인수업 #폼서비스활용증가  
 
