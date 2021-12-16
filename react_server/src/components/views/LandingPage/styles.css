@@ -1285,7 +1285,8 @@
 }
 
 .div_postUnit_ViewAndAddComments {
-  min-width: 100%;
+  min-width: 500px;
+  /* max-width: 500px; */
   /* 20211028 11:30 500px ->100% */
   font-family: Segoe UI Historic, Segoe UI, Arial, Helvetica, sans-serif;
   margin-bottom: 4px;
@@ -1401,7 +1402,7 @@
   flex-direction: row;
   outline: none;
   -webkit-font-smoothing: antialiased;
-  width: 80%;
+  width: 90%;
 }
 
 .div_postUnit_ViewAndAddComments_addCommentForm_Avatar {

@@ -24,6 +24,7 @@ function LoginPage(props) {
         console.log(response.payload.err);
       }
     });
+    
   }; // your form submit function which will invoke after successful validation
 
   console.log(watch('user_email')); // you can watch individual input by pass the name of the input

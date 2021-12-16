@@ -10,6 +10,7 @@ import {
   Dropdown,
   Button,
   Space,
+  Tooltip,
 } from 'antd';
 
 import Icon, {
@@ -31,6 +32,9 @@ import Icon, {
   LikeOutlined,
   LikeTwoTone,
   MessageOutlined,
+  ScheduleOutlined,
+  ScheduleFilled,
+  ScheduleTwoTone,
 } from '@ant-design/icons';
 
 import Dropzone from 'react-dropzone';
@@ -46,6 +50,12 @@ import LikeCount from './Sections/LikeCount';
 import { expressServerPort } from '../../../Config';
 import * as dateFns from 'date-fns';
 import { useHistory } from 'react-router-dom';
+
+import LoginContainer from './Sections/LoginContainer';
+
+import CalanderContainer from './Sections/containers/CalanderContainer';
+
+import styled, { css } from 'styled-components';
 
 import './styles.css';
 
@@ -459,7 +469,7 @@ function LandingPage(props) {
     };
 
     return (
-      <div className='div_postContainer' key={index}>
+      <div key={post._id} className='div_postContainer' key={index}>
         <div className='div_postUnit'>
           <div className='div_postUnit_header'>
             <span>추천 게시물</span>
@@ -534,6 +544,7 @@ function LandingPage(props) {
                     if (String(mimetype).startsWith('image')) {
                       return (
                         <div
+                          key={`${mimetype} ${index}`}
                           style={contentStyle}
                           className='div_postUnit_mainContent_fileContent_'
                         >
@@ -796,6 +807,12 @@ function LandingPage(props) {
     );
   });
 
+  const [isCalanderOpen, setisCalanderOpen] = useState(false);
+
+  const handleIsCalanderOpen = () => {
+    setisCalanderOpen(!isCalanderOpen);
+  };
+
   return (
     <div className='div_rootContainer'>
       <div className='div_space' style={{ backgroundColor: '#f0f2f5' }}></div>
@@ -814,10 +831,46 @@ function LandingPage(props) {
 
         {/* the right complementary section */}
         <Complementary />
+        {/* <LoginContainer /> */}
       </div>
       {/* <Logo /> */}
+      {isCalanderOpen && (
+        <CalanderDialog active={isCalanderOpen}>
+          <CalanderContainer />
+        </CalanderDialog>
+      )}
+      <CalanderOpenBtnContainer>
+        <Tooltip title='Calander'>
+          <Button
+            size='large'
+            type='primary'
+            shape='circle'
+            icon={<ScheduleTwoTone />}
+            onClick={() => handleIsCalanderOpen()}
+          />
+        </Tooltip>
+      </CalanderOpenBtnContainer>
     </div>
   );
 }
+
+const CalanderDialog = styled.div`
+  position: fixed;
+  z-index: 1200;
+  flex-shrink: 0;
+  inset: 0px;
+  background-color: #fff;
+  color: #262627;
+`;
+
+const CalanderOpenBtnContainer = styled.div`
+  position: fixed;
+  z-index: 1200;
+  bottom: 20px;
+  right: 40px;
+  & + Button {
+    width: 120px;
+  }
+`;
 
 export default withRouter(LandingPage);

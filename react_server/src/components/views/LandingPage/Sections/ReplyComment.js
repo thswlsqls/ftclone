@@ -81,7 +81,7 @@ function ReplyComment(props) {
                   float: 'left',
                   marginLeft: '36px',
                   marginRight: '0px',
-                  width: '75%',
+                  width: '90%',
                 }}
               >
                 {comment.responseTo._id === props.parentComment._id && (
@@ -104,8 +104,7 @@ function ReplyComment(props) {
           float: 'left',
           marginLeft: '36px',
           marginRight: '0px',
-          maxWidth: '90%',
-          minWidth: '80%',
+          width: '90%',
         }}
       >
         <div className='div_postUnit_ViewAndAddComments_addCommentForm'>
@@ -124,7 +123,7 @@ function ReplyComment(props) {
                     댓글을 입력하세요...
                   </span>
                 </div>
-                <ul>
+                {/* <ul>
                   <li>
                     <span>
                       <SmileOutlined />
@@ -145,7 +144,7 @@ function ReplyComment(props) {
                       <GifOutlined />
                     </span>
                   </li>
-                </ul>
+                </ul> */}
               </form>
             </div>
             <div className='div_postUnit_ViewAndAddComments_addCommentForm_inputForm_info'>

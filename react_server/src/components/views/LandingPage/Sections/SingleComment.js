@@ -52,9 +52,6 @@ function SingleComment(props) {
     Axios.post('/api/like/getLikeState', submitData)
       .then((response) => {
         if (response.data.success) {
-          alert(
-            '유저가 이 댓글에 좋아요를 등록했습니까?  ' + response.data.isLike
-          );
           setisCommentLike(Boolean(response.data.isLike));
           isLike = response.data.isLike;
         } else {
@@ -189,7 +186,7 @@ function SingleComment(props) {
                 </span>
               </div>
             </div>
-            <ul style={{ maxWidth: '75%' }}>
+            <ul style={{ maxWidth: '90%' }}>
               <li>
                 <span onClick={() => onCommentLike(props.comment)}>
                   <div className='div_postUnit_ViewAndAddComments_Comment_content_ulLike'>

@@ -31,7 +31,6 @@ function Comment(props) {
     Axios.post('/api/comment/getThisPostComments', submitData).then(
       (response) => {
         if (response.data.success) {
-          alert('CommentList responded successfully');
           setThisPostCommentCount(response.data.ThisPostCommentLists.length);
         } else {
           alert('Failed to save Comment');
@@ -52,7 +51,7 @@ function Comment(props) {
 
       Axios.post('/api/comment/saveComment', submitData).then((response) => {
         if (response.data.success) {
-          alert('the Comment registerd succesfully');
+          alert('답글이 성공적으로 등록되었습니다.');
           setThisPostCommentCount(ThisPostCommentCount + 1);
           setisCommented(!isCommented);
         } else {
@@ -97,7 +96,7 @@ function Comment(props) {
               <div className='div_postUnit_ViewAndAddComments_addCommentForm_inputForm_textForm_formDiv'>
                 <span id='commentSpan'>댓글을 입력하세요...</span>
               </div>
-              <ul>
+              {/* <ul>
                 <li>
                   <span>
                     <SmileOutlined />
@@ -118,7 +117,7 @@ function Comment(props) {
                     <GifOutlined />
                   </span>
                 </li>
-              </ul>
+              </ul> */}
             </form>
           </div>
           <div className='div_postUnit_ViewAndAddComments_addCommentForm_inputForm_info'>
