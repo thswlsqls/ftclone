@@ -10,6 +10,7 @@ import UploadPage from './components/views/UploadPage/UploadPage';
 import TemplateGalleryPage from './components/views/TemplateGalleryPage/TemplateGalleryPage';
 import FormPage from './components/views/FormPage/FormPage';
 import WorkspacePage from './components/views/WorkspacePage/WorkspacePage';
+import ChatPage from './components/views/ChatPage/Containers/ChatPage';
 
 import Navbar from './components/views/Navbar/Navbar';
 
@@ -47,6 +48,7 @@ function App() {
                 path='/templates'
                 component={Auth(TemplateGalleryPage, true)}
               />
+              <Route path='/ChatPage' component={ChatPage} />
               <Route exact path={`/form`} component={Auth(FormPage, true)} />
               <Route exact path='/*' component={NotFoundPage} />
               <Route exact path='/**/*' component={NotFoundPage} />

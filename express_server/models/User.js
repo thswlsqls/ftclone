@@ -80,7 +80,7 @@ userSchema.methods.comparePW = function (plainPassword, cb) {
 userSchema.methods.generateJWT = function (cb) {
   var user = this;
   const option = { expiresIn: '15m' };
-  var token = jwt.sign(user._id.toHexString(), 'PrivateKey', option);
+  var token = jwt.sign(user._id.toHexString(), 'PrivateKey');
 
   user.token = token;
   user.save(function (err, user) {

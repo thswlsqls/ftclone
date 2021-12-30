@@ -35,6 +35,7 @@ import Icon, {
   ScheduleOutlined,
   ScheduleFilled,
   ScheduleTwoTone,
+  WechatOutlined,
 } from '@ant-design/icons';
 
 import Dropzone from 'react-dropzone';
@@ -808,9 +809,23 @@ function LandingPage(props) {
   });
 
   const [isCalanderOpen, setisCalanderOpen] = useState(false);
-
   const handleIsCalanderOpen = () => {
     setisCalanderOpen(!isCalanderOpen);
+  };
+
+  const [isLiveChatOpen, setisLiveChatOpen] = useState(false);
+  const handleIsLiveChatOpen = () => {
+    setisLiveChatOpen(!isLiveChatOpen);
+  };
+  const showChatWindow = () => {
+    let _left = (window.screen.width - 650) / 2;
+    var _top = (window.screen.height - 380) / 2;
+    window.open(
+      '/ChatPage',
+      '_blank',
+      `width=300,height=400,left=${_left},top=${_top}`,
+      'resizable=no'
+    );
   };
 
   return (
@@ -840,7 +855,7 @@ function LandingPage(props) {
         </CalanderDialog>
       )}
       <CalanderOpenBtnContainer>
-        <Tooltip title='Calander'>
+        <Tooltip title='Calander' placement='left'>
           <Button
             size='large'
             type='primary'
@@ -850,6 +865,17 @@ function LandingPage(props) {
           />
         </Tooltip>
       </CalanderOpenBtnContainer>
+      <LiveChatOpenBtnContainer>
+        <Tooltip title='Live Chat' placement='left'>
+          <Button
+            size='large'
+            type='primary'
+            shape='circle'
+            icon={<WechatOutlined />}
+            onClick={() => showChatWindow()}
+          />
+        </Tooltip>
+      </LiveChatOpenBtnContainer>
     </div>
   );
 }
@@ -867,6 +893,16 @@ const CalanderOpenBtnContainer = styled.div`
   position: fixed;
   z-index: 1200;
   bottom: 20px;
+  right: 40px;
+  & + Button {
+    width: 120px;
+  }
+`;
+
+const LiveChatOpenBtnContainer = styled.div`
+  position: fixed;
+  z-index: 1200;
+  bottom: 70px;
   right: 40px;
   & + Button {
     width: 120px;
