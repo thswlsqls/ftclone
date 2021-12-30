@@ -12,7 +12,7 @@ __1. 프로젝트 개요__
 [ 활용 기술 ]  
 1) Front - Javascript(ES6), HTML, CSS, React(JSX, Babel, Hot reload, CSR), React Hooks, Redux, Redux-devtooks, Chrome-devtools  
 2) Back - Nginx, Javascript(ES6), Node.js, NPM(Node Package manager), Express.js, MongoDB Atlas  
-3) Deploy - AWS EC2, Route53, S3, Cloud front, ALB(Application Loadbalancer), ACM(Amazon Certification Manager)
+3) Infra - AWS EC2, Route53, S3, Cloud front, ALB(Application Loadbalancer), ACM(Amazon Certification Manager)
 
 -----------------------------------------------
 __2. 국내외 관련분야 현황__  
@@ -78,5 +78,5 @@ you can simply check the *.pdf, *_execution.mp4 files
 ## email: ftclone@naver.com 
 ## password: ftclone12345  
 
-#비대면문화 #영구재택근무 #온라인수업 #폼서비스활용증가  
+#비대면문화 #재택근무 #온라인수업 #폼서비스활용증가  
 
