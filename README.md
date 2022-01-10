@@ -49,8 +49,8 @@ __5. 프로젝트 설계__
 2) 개발환경  
 ![image](https://user-images.githubusercontent.com/58901024/143248017-7fef707d-cd05-4ba3-8c4a-6a500093a1be.png)  
 
-3) 다이어그램과 명세서
-<img width="100%" alt="유스케이스 다이어그램과 명세서, 웹사이트 구성도, 테이블 설계 초안" src="https://user-images.githubusercontent.com/58901024/148745565-7ab52591-e79e-4e15-b0dc-e0abf584ba31.png">
+3) 유스케이스 다이어그램과 명세서
+<img width="100%" alt="유스케이스 다이어그램과 명세서, 웹사이트 구성도, 테이블 설계 초안" src="https://user-images.githubusercontent.com/58901024/148745988-aad0e1fc-c4aa-4a8e-8218-e4b9efc41afd.png">
 
 4) 데이터베이스 설계  
 ![image](https://user-images.githubusercontent.com/58901024/143248158-deef4b2f-cfd2-47f7-bf73-32106e20f05d.png)  
