@@ -5,14 +5,15 @@
 __1. 프로젝트 개요__
 -----------------------------------------------  
 [ 구현 기능 ]  
-1) 게시판에 이미지 및 동영상 파일들을 업로드, 간단한 캘린더 기능
+1) 게시판에 이미지 및 동영상 단다중 파일을 업로드
 2) 댓글과 답글, 좋아요 등록, 제작한 설문조사를 배포
 3) 설문조사를 생성하고 수정, 삭제, 배포하여 응답 결과를 확인
+4) 캘린더보기 및 특일정보 조회, 소켓 통신하여 간단한 다대다 실시간 채팅
 
 [ 활용 기술 ]  
-1) Front - Javascript(ES6), HTML, CSS, React(JSX, Babel, Hot reload, CSR), React Hooks, Redux, Redux-devtooks, Chrome-devtools  
+1) Front - Javascript(ES6), HTML, CSS, React(JSX, Babel, Hot reload, CSR), React Hooks, Redux, Redux-devtools, Chrome-devtools  
 2) Back - Nginx, Javascript(ES6), Node.js, NPM(Node Package manager), Express.js, MongoDB Atlas  
-3) Infra - AWS EC2, Route53, S3, Cloud front, ALB(Application Loadbalancer), ACM(Amazon Certification Manager)
+3) Infra - AWS EC2, Route53, S3, Cloud front, ALB(Application Loadbalancer), ACM(Amazon Certification Manager), letsencrypt
 
 -----------------------------------------------
 __2. 국내외 관련분야 현황__  
