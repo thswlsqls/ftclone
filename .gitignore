@@ -1,7 +1,7 @@
 /node_modules
 /build
 
-/express-socket-server
+# /express-socket-server
 ftclone-portfolio.link.index.js
 
 .env
