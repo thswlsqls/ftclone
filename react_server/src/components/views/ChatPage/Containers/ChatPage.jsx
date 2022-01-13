@@ -10,14 +10,47 @@ import { v1 } from 'uuid';
 import 'antd/dist/antd.css';
 import '../ChatPageStyles.css';
 
-const socket = io.connect('http://192.168.45.41:8000');
+import { useEffect } from 'react';
 
+
+
+// const socket = io.connect('http://localhost:3000/socket', {
+//   path:'/socket',
+//   cors: {origin: '*'},
+// });
+
+// const socket = io.connect('http://localhost:5001', {
+//   // path:'/socket',
+//   cors: {origin: '*'},
+// });
+
+// 202201092053
+const socket = io.connect('https://ftclone-portfolio.link:5002', {
+  // path:'/socket',
+  cors: {origin: '*'},
+});
+// http://192.168.45.41:8000
 // http://www.ftclone.com/socket
 // http://3.37.1.151:5000/
 // http://www.ftclone.com:5000
 // http://192.168.45.41:5000
 
 export const ChatPage = () => {
+    // useEffect(() => {
+    //     socket = io.connect('https://ftclone-portfolio.link/socket', {
+    //         path:'/socket',
+    //         cors: {origin: '*'},
+    //     });
+    // }, [])
+
+  //   useEffect(() => {
+  //     socket = io.connect('http://localhost:3000/socket', {
+  //         path:'/socket',
+  //         cors: {origin: '*'},
+  //     });
+  // }, [socket])
+
+
   const [username, setUsername] = useState('');
   const [room, setRoom] = useState('');
   const [showChat, setShowChat] = useState(false);
@@ -29,6 +62,7 @@ export const ChatPage = () => {
       socket.emit('join_room', room);
       setShowChat(true);
     }
+    console.log(`join the room ${username} : ${room}`)
   };
 
   const handleEnterCSRoom = () => {

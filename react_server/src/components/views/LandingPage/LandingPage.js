@@ -821,9 +821,9 @@ function LandingPage(props) {
     let _left = (window.screen.width - 650) / 2;
     var _top = (window.screen.height - 380) / 2;
     window.open(
-      '/ChatPage',
+      'https://ftclone-portfolio.link/ChatPage',
       '_blank',
-      `width=300,height=400,left=${_left},top=${_top}`,
+      `width=300,height=400,left=${_left},tosp=${_top}`,
       'resizable=no'
     );
   };

@@ -54,7 +54,9 @@ app.get('/test', (req, res) => res.sendDate(''));
 var debug = require('debug')('server:server');
 var http = require('http');
 
-var port = normalizePort(process.env.PORT || '5000');
+
+var port = normalizePort(process.env.PORT || '5001');
+
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -86,24 +88,41 @@ const io = new Server(server, {
 // origin: 'https://www.my-awssimplified.com',
 // origin: 'http://localhost:3030'
 
-app.get('/api', (req, res) => {
-  io.on('connection', (socket) => {
-    console.log(`User Connected: ${socket.id}`);
+// app.get('/api', (req, res) => {
+//   io.of('/socket').on('connection', (socket) => {
+//     console.log(`User Connected: ${socket.id}`);
 
-    socket.on('join_room', (data) => {
-      socket.join(data);
-      console.log(`User with ID: ${socket.id} joined room: ${data}`);
-    });
+//     socket.on('join_room', (data) => {
+//       socket.join(data);
+//       console.log(`User with ID: ${socket.id} joined room: ${data}`);
+//     });
 
-    socket.on('send_message', (data) => {
-      socket.to(data.room).emit('receive_message', data);
-    });
+//     socket.on('send_message', (data) => {
+//       socket.to(data.room).emit('receive_message', data);
+//     });
 
-    socket.on('disconnect', () => {
-      console.log('User Disconnected', socket.id);
-    });
+//     socket.on('disconnect', () => {
+//       console.log('User Disconnected', socket.id);
+//     });
+//   });
+//   res.send('express server' + socket);
+// });
+
+io.of('/socket').on('connection', (socket) => {
+  console.log(`User Connected: ${socket.id}`);
+
+  socket.on('join_room', (data) => {
+    socket.join(data);
+    console.log(`User with ID: ${socket.id} joined room: ${data}`);
   });
-  res.send('express server' + socket);
+
+  socket.on('send_message', (data) => {
+    socket.to(data.room).emit('receive_message', data);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User Disconnected', socket.id);
+  });
 });
 
 io.on('connection', (socket) => {

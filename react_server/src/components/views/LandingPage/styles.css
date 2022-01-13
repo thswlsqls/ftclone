@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import '~antd/dist/antd.css';
+=======
+@import "~antd/dist/antd.css";
+>>>>>>> f9a1161 (commit changes, live chat added)
 
 .div_rootContainer {
   background-color: #f0f2f5;
@@ -1285,7 +1289,11 @@
 }
 
 .div_postUnit_ViewAndAddComments {
+<<<<<<< HEAD
   min-width: 500px;
+=======
+  /* min-width: 500px; */
+>>>>>>> f9a1161 (commit changes, live chat added)
   /* max-width: 500px; */
   /* 20211028 11:30 500px ->100% */
   font-family: Segoe UI Historic, Segoe UI, Arial, Helvetica, sans-serif;
