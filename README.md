@@ -1,6 +1,6 @@
 # FTCLONE README.md
 
-# Domain -> fform2.link
+# Domain -> [fform022.link](https://fform022.link/)
 
 ## Facebook & Typeform clone MERN stack webapp
 
@@ -100,7 +100,7 @@ you can simply check the _.pdf, _\_execution.mp4 files
 
 ◻ website domain ◻
 
-## fform022.link
+## [fform022.link](https://fform022.link/)
 
 ◾ guest account ◾
 
